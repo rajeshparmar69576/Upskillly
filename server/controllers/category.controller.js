@@ -1,8 +1,8 @@
-const Tag = require('../models/tag.model.js')
+const Category = require('../models/category.model.js')
 
 // create Tag ka handler function
 
-exports.createTag = async(req,res) => {
+exports.createCategory = async(req,res) => {
     try{
         const {name,description} = req.body
 
@@ -14,18 +14,18 @@ exports.createTag = async(req,res) => {
         }
 
         // create entry in db
-        const tagDetails = await Tag.create({
+        const categoryDetails = await Category.create({
             name:name,
             description:description
         })
 
         return res.status(201).json({
             success:true,
-            message:"Tag created successfully"
+            message:"Category created successfully"
         })
 
     }catch(error){
-        console.log("ERror while creating course tags",error.message)
+        console.log("Error while creating category",error.message)
         return res.status(500).json({
             success:false,
             message:error.message
