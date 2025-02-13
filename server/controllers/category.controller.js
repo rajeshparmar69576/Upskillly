@@ -1,6 +1,6 @@
 const Category = require('../models/category.model.js')
 
-// create Tag ka handler function
+// create category ka handler function
 
 exports.createCategory = async(req,res) => {
     try{
@@ -34,17 +34,17 @@ exports.createCategory = async(req,res) => {
 }
 
 
-// get all tags
-exports.showAllTags = async(req,res) => {
+// get all Category
+exports.showCategory = async(req,res) => {
     try{
-        const allTags = await Tag.find({},{name:true},{description:true})
+        const allCategory = awaitCategory.find({},{name:true},{description:true})
         res.status(200).json({
             success:true,
-            message:"All tags returned successfully",
-            allTags
+            message:"allCategory returned successfully",
+            allCategory
         })
     }catch(error){
-        console.log("ERror while getting course tags",error.message)
+        console.log("ERror while getting course Category",error.message)
         return res.status(500).json({
             success:false,
             message:error.message
