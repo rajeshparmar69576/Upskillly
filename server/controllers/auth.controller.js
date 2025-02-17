@@ -6,6 +6,7 @@ const sendMail = require('../utils/mailsender.util.js')
 const optGenerator = require("otp-generator");
 require('dotenv').config()
 
+
 // sendOtp
 exports.sendOtp = async (req, res) => {
   try {
