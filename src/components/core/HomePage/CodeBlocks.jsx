@@ -23,14 +23,14 @@ const CodeBlocks = ({
                     <Button active={ctabtn1.active} linkto={ctabtn1.linkto}>
                         <div className='flex gap-2 items-center'>
                             {ctabtn1.btnText}
-                            {FaArrowRight}
+                            <FaArrowRight/>
                         </div>
                     </Button>
 
                     <Button active={ctabtn2.active} linkto={ctabtn2.linkto}>
                         <div className='flex gap-2 items-center'>
                             {ctabtn2.btnText}
-                            {FaArrowRight}
+                            <FaArrowRight/>
                         </div>
                     </Button>
                 </div>
